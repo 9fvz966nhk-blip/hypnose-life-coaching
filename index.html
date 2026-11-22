@@ -224,10 +224,52 @@
 [data-sk-akzent="atelier"] .sk-icon-soft{background:var(--sk-champagne-100);color:var(--sk-amber-600)}
 [data-sk-akzent="atelier"] h2 em,[data-sk-akzent="atelier"] .sk-display em{color:var(--sk-choc-600)}
 
+/* ---------- 2f. Schema Racing (Racing-Framework) ----------
+   <html data-sk-akzent="racing">: Racing Green für dunkle Flächen, Köpfe und Text, Eierschalenweiss für helle Flächen,
+   Champagnergold als Hauptaktion (gefüllt, Schrift Tiefgrün) und edler Akzent (nutzt die Amber-Rollen). */
+:root[data-sk-akzent="racing"],[data-sk-akzent="racing"]{
+  --sk-choc-50:#eef3ef; --sk-choc-100:#dbe6de; --sk-choc-200:#b7c4ae; --sk-choc-300:#8fa995;
+  --sk-choc-400:#6e8f78; --sk-choc-500:#2f5d45; --sk-choc-600:#1f5c3f; --sk-choc-700:#0d4a2e;
+  --sk-choc-800:#004225; --sk-choc-900:#032a1c; --sk-choc-950:#021c12;
+  --sk-champagne-50:#fbf8f1; --sk-champagne-100:#f3ead2; --sk-champagne-200:#efe1b8; --sk-champagne-300:#d6b970;
+  --sk-amber-300:#d6b970; --sk-amber-400:#c2a35a; --sk-amber-500:#a88a45; --sk-amber-600:#86692f; --sk-amber-700:#5e4a20;
+  --sk-gold-50:var(--sk-champagne-50); --sk-gold-100:var(--sk-champagne-100); --sk-gold-200:var(--sk-champagne-200); --sk-gold-300:var(--sk-champagne-300);
+  --sk-gold-400:var(--sk-amber-400); --sk-gold-500:var(--sk-amber-500); --sk-gold-600:var(--sk-amber-600); --sk-gold-700:var(--sk-amber-700);
+  --sk-accent-rgb:214,185,112;
+  --sk-eggshell-light:#f6f1e6; --sk-eggshell:#efe9dc; --sk-eggshell-deep:#e2d9c6;
+  --sk-cream:#fbf8f1; --sk-sand:#f3ede1; --sk-sand-deep:#e9dfcb;
+  --sk-page:#f6f1e6; --sk-surface:#fbf8f1; --sk-surface-alt:#efe9dc; --sk-line:rgba(26,93,63,.12);
+  --sk-ink:#1d2b22; --sk-muted:#535e55; --sk-subtle:#8e9489;
+  --sk-glass:rgba(251,248,241,.6); --sk-glass-dark:rgba(3,42,28,.45);
+  --sk-shadow-sm:0 2px 8px -2px rgba(17,63,42,.14); --sk-shadow:0 20px 50px -22px rgba(17,63,42,.4); --sk-shadow-lg:0 30px 80px -30px rgba(3,42,28,.55);
+  --sk-neu-bg:linear-gradient(145deg,#fdfbf6,#f1eadb);
+  --sk-neu-shadow:14px 16px 34px -10px rgba(140,120,84,.34),-10px -10px 26px -6px rgba(255,255,255,.95),inset 1px 1px 0 rgba(255,255,255,.8);
+  --sk-neu-shadow-hover:20px 24px 44px -12px rgba(140,120,84,.4),-12px -12px 30px -6px rgba(255,255,255,1),inset 1px 1px 0 rgba(255,255,255,.8);
+  --sk-neu-press:inset 6px 6px 14px rgba(140,120,84,.2),inset -6px -6px 14px rgba(255,255,255,.9);
+  --bs-primary:#004225; --bs-primary-rgb:0,66,37;
+  --bs-secondary:#d6b970; --bs-secondary-rgb:214,185,112;
+  --bs-body-color:#1d2b22; --bs-body-color-rgb:29,43,34; --bs-heading-color:#032a1c;
+  --bs-link-color:#004225; --bs-link-color-rgb:0,66,37; --bs-link-hover-color:#2f5d45;
+  --bs-focus-ring-color:rgba(47,93,69,.4); --bs-highlight-bg:#f3ead2;
+}
+/* Hauptaktion in Champagnergold mit Tiefgrün-Schrift, wie im Racing-Framework */
+[data-sk-akzent="racing"] .btn-amber{--bs-btn-color:#032a1c;--bs-btn-hover-color:#032a1c;--bs-btn-active-color:#032a1c;background-image:linear-gradient(160deg,#efe1b8,#d6b970 55%,#c2a35a);box-shadow:0 10px 26px -12px rgba(3,42,28,.6),inset 0 1px 0 rgba(255,255,255,.45)}
+[data-sk-akzent="racing"] .btn-amber:hover{background-image:linear-gradient(160deg,#f5ebcc,#e0c787 55%,#d6b970)}
+[data-sk-akzent="racing"] .btn-secondary{--bs-btn-bg:#d6b970;--bs-btn-border-color:#d6b970;--bs-btn-hover-bg:#efe1b8;--bs-btn-hover-border-color:#efe1b8;--bs-btn-color:#032a1c}
+[data-sk-akzent="racing"] .sk-badge-gold{background:var(--sk-champagne-100);color:var(--sk-amber-700)}
+[data-sk-akzent="racing"] .sk-badge-amber{background:rgba(214,185,112,.22);color:var(--sk-amber-700)}
+[data-sk-akzent="racing"] .sk-stars{color:var(--sk-amber-400)}
+[data-sk-akzent="racing"] .sk-chip.active,[data-sk-akzent="racing"] .sk-chip[aria-pressed="true"]{background:var(--sk-choc-800);border-color:var(--sk-choc-800);color:#fff;box-shadow:inset 0 -2px 0 var(--sk-champagne-300)}
+[data-sk-akzent="racing"] .sk-track-progress > i{background:linear-gradient(90deg,var(--sk-choc-800),var(--sk-champagne-300))}
+[data-sk-akzent="racing"] .accordion-button:not(.collapsed){color:var(--sk-choc-800);box-shadow:inset 3px 0 0 var(--sk-champagne-300)}
+[data-sk-akzent="racing"] .sk-icon{background:linear-gradient(150deg,#004225,#2f5d45);color:var(--sk-champagne-300)}
+[data-sk-akzent="racing"] .sk-icon-soft{background:var(--sk-champagne-100);color:var(--sk-choc-800)}
+[data-sk-akzent="racing"] h2 em,[data-sk-akzent="racing"] .sk-display em{color:var(--sk-choc-600)}
+
 /* ---------- 2d. Neumorph: Karten heben sich weich ab ----------
    .sk-neu = helle Fläche mit zwei weichen Schatten (dunkel unten rechts, hell oben links).
    Ohne Unschärfe, daher günstig fürs Scrollen. .sk-neu-hover hebt beim Überfahren an. */
-:root:not([data-sk-akzent="atelier"]){
+:root:not([data-sk-akzent="atelier"]):not([data-sk-akzent="racing"]){
   --sk-neu-bg:linear-gradient(145deg,#fffdf9,#f4ede1);
   --sk-neu-shadow:14px 16px 34px -10px rgba(105,66,38,.30),-10px -10px 26px -6px rgba(255,255,255,.95),inset 1px 1px 0 rgba(255,255,255,.8);
   --sk-neu-shadow-hover:20px 24px 44px -12px rgba(105,66,38,.36),-12px -12px 30px -6px rgba(255,255,255,1),inset 1px 1px 0 rgba(255,255,255,.8);
@@ -763,6 +805,7 @@ body > section .text-center h2::after{margin-inline:auto}
 .schema-switch [data-schema="atelier"] .punkt{background:linear-gradient(135deg,#2f3130 50%,#c0704f 50%)}
 .sk-navbar:not(.is-scrolled) .schema-switch{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22)}
 @media(max-width:1199.98px){.nav-rechts{justify-content:space-between;padding:.5rem 0 .25rem}}
+@media(max-width:575.98px){.nav-rechts{flex-direction:column;align-items:stretch;gap:.6rem}.nav-rechts .schema-switch{justify-content:space-between}.nav-rechts .schema-switch button{flex:1;justify-content:center}.nav-rechts .btn{width:100%}}
 /* ===== Navigation mit Angebots-Menü, Referenzen ===== */
 .sk-navbar .dropdown-toggle{background:none;border:0}
 .sk-navbar .dropdown-menu{min-width:15rem}
@@ -779,6 +822,37 @@ body > section .text-center h2::after{margin-inline:auto}
 .referenz{border-radius:8px;padding:1.6rem 1.5rem;height:100%;display:flex;flex-direction:column;gap:.9rem}
 .referenz blockquote{margin:0;font-family:var(--sk-font-display);font-size:1.1rem;line-height:1.45;color:var(--sk-choc-800);flex:1}
 .referenz figcaption{font-size:.85rem;font-weight:600;color:var(--sk-amber-600)}
+/* ===== Schema Racing: feste Farbwerte der Seite umstellen ===== */
+[data-sk-akzent="racing"] .sk-navbar:not(.is-scrolled){background:rgba(3,42,28,.32)}
+[data-sk-akzent="racing"] .hero .bg-bild{--bg-rgb:0,66,37!important}
+[data-sk-akzent="racing"] section .bg-bild{--bg-rgb:246,241,230!important}
+[data-sk-akzent="racing"] section.bg-eggshell .bg-bild{--bg-rgb:239,233,220!important;--bg-rand:246,241,230}
+[data-sk-akzent="racing"] .hero-media{background:radial-gradient(circle at 84% 18%,rgba(214,185,112,.28),transparent 30%),radial-gradient(ellipse at 75% 40%,rgba(62,122,90,.35),transparent 60%)}
+[data-sk-akzent="racing"] .hero::after{background:linear-gradient(to bottom,rgba(0,66,37,0) 0,rgba(13,74,46,.4) 30%,rgba(110,143,120,.35) 55%,rgba(233,223,203,.75) 80%,var(--sk-page) 100%)}
+[data-sk-akzent="racing"] .atem-ring{border-color:rgba(214,185,112,.32)}
+[data-sk-akzent="racing"] .atem-ring.r2{border-color:rgba(214,185,112,.18)}
+[data-sk-akzent="racing"] .atem-kugel{background:radial-gradient(circle at 35% 30%,rgba(251,248,241,.97),rgba(239,225,184,.75) 38%,rgba(214,185,112,.45) 70%,rgba(0,66,37,.15));box-shadow:0 0 80px 10px rgba(214,185,112,.28),inset 0 0 40px rgba(255,255,255,.25)}
+[data-sk-akzent="racing"] .atem-text{color:#032a1c}
+[data-sk-akzent="racing"] .hero p.mb-3{color:var(--sk-champagne-300)!important}
+[data-sk-akzent="racing"] .saetze{background:radial-gradient(ellipse 60% 40% at 50% 22%,rgba(214,185,112,.16),transparent 70%),radial-gradient(ellipse 70% 55% at 88% 30%,rgba(183,196,174,.35),transparent 70%),radial-gradient(ellipse 55% 35% at 10% 60%,rgba(47,93,69,.08),transparent 70%)}
+[data-sk-akzent="racing"] .ton-champ{--ton:linear-gradient(165deg,rgba(251,248,241,.94) 0,rgba(243,234,210,.82) 42%,rgba(214,185,112,.5) 100%)}
+[data-sk-akzent="racing"] .ton-champ .sk-badge{background:var(--sk-choc-800);color:var(--sk-champagne-200)}
+[data-sk-akzent="racing"] .ton-mocha{--ton:linear-gradient(165deg,rgba(3,42,28,.92) 0,rgba(0,66,37,.75) 48%,rgba(47,93,69,.55) 100%)}
+[data-sk-akzent="racing"] .ton-amber{--ton:linear-gradient(165deg,rgba(13,74,46,.9) 0,rgba(47,93,69,.72) 50%,rgba(214,185,112,.5) 100%)}
+[data-sk-akzent="racing"] .ton-hoffnung{--ton:linear-gradient(180deg,rgba(3,42,28,.05) 20%,rgba(0,66,37,.55) 60%,rgba(3,42,28,.9) 100%)}
+[data-sk-akzent="racing"] .ton-hoffnung .sk-badge{background:var(--sk-champagne-300);color:#032a1c}
+[data-sk-akzent="racing"] .ton-amber .sk-badge{background:rgba(251,248,241,.92);color:#004225}
+[data-sk-akzent="racing"] .ton-mocha .sk-badge{background:rgba(214,185,112,.2);color:var(--sk-champagne-200);border-color:rgba(214,185,112,.4)}
+[data-sk-akzent="racing"] .sk-neu-dunkel{box-shadow:16px 18px 38px -12px rgba(3,42,28,.55),-10px -10px 26px -8px rgba(255,255,255,.9),inset 1px 1px 0 rgba(255,255,255,.1)!important}
+[data-sk-akzent="racing"] .sk-card-dark .sk-media{box-shadow:12px 14px 30px -10px rgba(2,20,12,.6),-8px -8px 24px -8px rgba(110,143,120,.55)!important}
+[data-sk-akzent="racing"] body > section h2:not(.sk-cta h2)::after{background:linear-gradient(90deg,var(--sk-choc-800),var(--sk-champagne-300))}
+[data-sk-akzent="racing"] .sk-footer{background:linear-gradient(to bottom,var(--sk-page),var(--sk-sand-deep))}
+[data-sk-akzent="racing"] section .sk-glass:not(.praxis-text):not(.portrait .sk-glass){background:rgba(251,248,241,.92)}
+[data-sk-akzent="racing"] .saetze .btn-icon,[data-sk-akzent="racing"] .nach-oben{color:var(--sk-choc-800)}
+[data-sk-akzent="racing"] .saetze .btn-icon:hover,[data-sk-akzent="racing"] .nach-oben:hover,[data-sk-akzent="racing"] .nach-oben:focus-visible{color:var(--sk-champagne-200);background:linear-gradient(150deg,#004225,#2f5d45)}
+[data-sk-akzent="racing"] .schritt.erreicht .schritt-punkt{background:var(--sk-choc-800);border-color:var(--sk-choc-800);color:var(--sk-champagne-200)}
+[data-sk-akzent="racing"] .ablauf-linie{background:linear-gradient(var(--sk-choc-800),var(--sk-champagne-300))}
+.schema-switch [data-schema="racing"] .punkt{background:linear-gradient(135deg,#004225 50%,#d6b970 50%)}
 @media (prefers-reduced-motion:reduce){.hero-in > *{opacity:1;transform:none}.atem-kugel{transform:scale(.95)!important}}
 </style>
 </head>
@@ -808,6 +882,7 @@ body > section .text-center h2::after{margin-inline:auto}
         <div class="schema-switch" role="radiogroup" aria-label="Farbschema">
           <button type="button" role="radio" data-schema="mocha" aria-checked="true" title="Farbschema Mocha"><i class="punkt"></i>Mocha</button>
           <button type="button" role="radio" data-schema="atelier" aria-checked="false" title="Farbschema Atelier"><i class="punkt"></i>Atelier</button>
+          <button type="button" role="radio" data-schema="racing" aria-checked="false" title="Farbschema Racing Green"><i class="punkt"></i>Racing</button>
         </div>
         <a href="#kontakt" class="btn btn-amber btn-sm">Kontakt &amp; Termin</a>
       </div>
@@ -1368,11 +1443,11 @@ body > section .text-center h2::after{margin-inline:auto}
   function schema(name, merken){
     html.dataset.skAkzent = name;
     schalter.forEach(b => b.setAttribute('aria-checked', String(b.dataset.schema === name)));
-    if (farbe) farbe.content = name === 'atelier' ? '#2f3130' : '#4b3326';
+    if (farbe) farbe.content = { atelier: '#2f3130', racing: '#004225' }[name] || '#4b3326';
     if (merken) { try { localStorage.setItem('sk-schema', name); } catch (e) {} }
   }
   let gemerkt = null; try { gemerkt = localStorage.getItem('sk-schema'); } catch (e) {}
-  schema(gemerkt === 'atelier' || gemerkt === 'mocha' ? gemerkt : (html.dataset.skAkzent || 'mocha'), false);
+  schema(['mocha', 'atelier', 'racing'].includes(gemerkt) ? gemerkt : (html.dataset.skAkzent || 'mocha'), false);
   schalter.forEach(b => b.addEventListener('click', () => schema(b.dataset.schema, true)));
 
   // Angebots-Menü: passenden Reiter öffnen und zum Abschnitt gleiten
