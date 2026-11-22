@@ -185,10 +185,49 @@
 [data-sk-akzent="mocha"] .sk-icon-soft{background:var(--sk-champagne-100);color:var(--sk-amber-600)}
 [data-sk-akzent="mocha"] h2 em,[data-sk-akzent="mocha"] .sk-display em{color:var(--sk-amber-500)}
 
+/* ---------- 2e. Schema Atelier (Moodboard) ----------
+   <html data-sk-akzent="atelier">: Anthrazit für dunkle Flächen und Text, Mocha-Rotbraun für Überschriften-Akzente,
+   Terrakotta als Akzent (nutzt die Amber-Rollen), Travertin und Greige als helle Töne, Messing für kleine Lichter. */
+:root[data-sk-akzent="atelier"],[data-sk-akzent="atelier"]{
+  --sk-choc-50:#f5f1ee; --sk-choc-100:#e9e1db; --sk-choc-200:#d3c4b9; --sk-choc-300:#b49a8a;
+  --sk-choc-400:#8f6e5c; --sk-choc-500:#7a4f3b; --sk-choc-600:#6a3d2a; --sk-choc-700:#4a4542;
+  --sk-choc-800:#2f3130; --sk-choc-900:#232524; --sk-choc-950:#181a19;
+  --sk-champagne-50:#faf8f4; --sk-champagne-100:#f0ebe2; --sk-champagne-200:#e4dccd; --sk-champagne-300:#d5c7ad;
+  --sk-amber-300:#d9967a; --sk-amber-400:#c0704f; --sk-amber-500:#a95c3e; --sk-amber-600:#8b4a31; --sk-amber-700:#6a3d2a;
+  --sk-brass:#b38b45; --sk-greige:#c3beba; --sk-warmgrau:#85837e;
+  --sk-gold-50:var(--sk-champagne-50); --sk-gold-100:var(--sk-champagne-100); --sk-gold-200:var(--sk-champagne-200); --sk-gold-300:var(--sk-champagne-300);
+  --sk-gold-400:var(--sk-amber-400); --sk-gold-500:var(--sk-amber-500); --sk-gold-600:var(--sk-amber-600); --sk-gold-700:var(--sk-amber-700);
+  --sk-accent-rgb:192,112,79;
+  --sk-eggshell-light:#f4f2ef; --sk-eggshell:#e9e5e0; --sk-eggshell-deep:#d6d0ca;
+  --sk-cream:#f7f5f2; --sk-sand:#ece7e1; --sk-sand-deep:#ddd5cc;
+  --sk-page:#f4f2ef; --sk-surface:#fbfaf8; --sk-surface-alt:#e9e5e0; --sk-line:rgba(47,49,48,.12);
+  --sk-ink:#2f3130; --sk-muted:#6c6863; --sk-subtle:#85837e;
+  --sk-glass:rgba(251,250,248,.6); --sk-glass-dark:rgba(47,49,48,.45);
+  --sk-shadow-sm:0 2px 8px -2px rgba(47,49,48,.14); --sk-shadow:0 20px 50px -22px rgba(47,49,48,.4); --sk-shadow-lg:0 30px 80px -30px rgba(24,26,25,.55);
+  --sk-neu-bg:linear-gradient(145deg,#fdfcfb,#efebe6);
+  --sk-neu-shadow:14px 16px 34px -10px rgba(60,52,46,.28),-10px -10px 26px -6px rgba(255,255,255,.95),inset 1px 1px 0 rgba(255,255,255,.8);
+  --sk-neu-shadow-hover:20px 24px 44px -12px rgba(60,52,46,.34),-12px -12px 30px -6px rgba(255,255,255,1),inset 1px 1px 0 rgba(255,255,255,.8);
+  --sk-neu-press:inset 6px 6px 14px rgba(60,52,46,.16),inset -6px -6px 14px rgba(255,255,255,.9);
+  --bs-primary:#2f3130; --bs-primary-rgb:47,49,48;
+  --bs-secondary:#d5c7ad; --bs-secondary-rgb:213,199,173;
+  --bs-body-color:#2f3130; --bs-body-color-rgb:47,49,48; --bs-heading-color:#2f3130;
+  --bs-link-color:#8b4a31; --bs-link-color-rgb:139,74,49; --bs-link-hover-color:#6a3d2a;
+  --bs-focus-ring-color:rgba(192,112,79,.4); --bs-highlight-bg:#f0ebe2;
+}
+[data-sk-akzent="atelier"] .btn-secondary{--bs-btn-bg:var(--sk-champagne-300);--bs-btn-border-color:var(--sk-champagne-300);--bs-btn-hover-bg:var(--sk-champagne-200);--bs-btn-hover-border-color:var(--sk-champagne-200);--bs-btn-color:var(--sk-choc-800)}
+[data-sk-akzent="atelier"] .sk-badge-gold{background:var(--sk-champagne-100);color:var(--sk-amber-700)}
+[data-sk-akzent="atelier"] .sk-stars{color:var(--sk-brass)}
+[data-sk-akzent="atelier"] .sk-chip.active,[data-sk-akzent="atelier"] .sk-chip[aria-pressed="true"]{background:var(--sk-amber-400);border-color:var(--sk-amber-400);color:#fff}
+[data-sk-akzent="atelier"] .sk-track-progress > i{background:linear-gradient(90deg,var(--sk-amber-400),var(--sk-amber-600))}
+[data-sk-akzent="atelier"] .accordion-button:not(.collapsed){color:var(--sk-amber-700);box-shadow:inset 3px 0 0 var(--sk-amber-400)}
+[data-sk-akzent="atelier"] .sk-icon{background:linear-gradient(150deg,var(--sk-amber-400),var(--sk-amber-600));color:#fff}
+[data-sk-akzent="atelier"] .sk-icon-soft{background:var(--sk-champagne-100);color:var(--sk-amber-600)}
+[data-sk-akzent="atelier"] h2 em,[data-sk-akzent="atelier"] .sk-display em{color:var(--sk-choc-600)}
+
 /* ---------- 2d. Neumorph: Karten heben sich weich ab ----------
    .sk-neu = helle Fläche mit zwei weichen Schatten (dunkel unten rechts, hell oben links).
    Ohne Unschärfe, daher günstig fürs Scrollen. .sk-neu-hover hebt beim Überfahren an. */
-:root{
+:root:not([data-sk-akzent="atelier"]){
   --sk-neu-bg:linear-gradient(145deg,#fffdf9,#f4ede1);
   --sk-neu-shadow:14px 16px 34px -10px rgba(105,66,38,.30),-10px -10px 26px -6px rgba(255,255,255,.95),inset 1px 1px 0 rgba(255,255,255,.8);
   --sk-neu-shadow-hover:20px 24px 44px -12px rgba(105,66,38,.36),-12px -12px 30px -6px rgba(255,255,255,1),inset 1px 1px 0 rgba(255,255,255,.8);
@@ -685,6 +724,45 @@ body > section .text-center h2::after{margin-inline:auto}
   .saetze .sk-track > *{flex:0 0 100%}
   .satz-foto{min-height:min(118vw,440px)}
 }
+/* ===== Schema Atelier (Moodboard): feste Farbwerte der Seite umstellen ===== */
+[data-sk-akzent="atelier"] .sk-navbar:not(.is-scrolled){background:rgba(24,26,25,.3)}
+[data-sk-akzent="atelier"] .hero .bg-bild{--bg-rgb:47,49,48!important}
+[data-sk-akzent="atelier"] section .bg-bild{--bg-rgb:244,242,239!important}
+[data-sk-akzent="atelier"] section.bg-eggshell .bg-bild{--bg-rgb:233,229,224!important;--bg-rand:244,242,239}
+[data-sk-akzent="atelier"] .hero::after{background:linear-gradient(to bottom,rgba(47,49,48,0) 0,rgba(106,61,42,.35) 30%,rgba(192,112,79,.28) 55%,rgba(213,199,173,.7) 80%,var(--sk-page) 100%)}
+[data-sk-akzent="atelier"] .atem-ring{border-color:rgba(213,199,173,.3)}
+[data-sk-akzent="atelier"] .atem-ring.r2{border-color:rgba(213,199,173,.18)}
+[data-sk-akzent="atelier"] .atem-kugel{background:radial-gradient(circle at 35% 30%,rgba(250,248,244,.96),rgba(213,199,173,.7) 38%,rgba(192,112,79,.42) 70%,rgba(106,61,42,.12));box-shadow:0 0 80px 10px rgba(192,112,79,.24),inset 0 0 40px rgba(255,255,255,.25)}
+[data-sk-akzent="atelier"] .hero p.mb-3{color:var(--sk-amber-300)!important}
+[data-sk-akzent="atelier"] .saetze{background:radial-gradient(ellipse 60% 40% at 50% 22%,rgba(192,112,79,.13),transparent 70%),radial-gradient(ellipse 70% 55% at 88% 30%,rgba(195,190,186,.35),transparent 70%),radial-gradient(ellipse 55% 35% at 10% 60%,rgba(179,139,69,.10),transparent 70%)}
+[data-sk-akzent="atelier"] .ton-champ{--ton:linear-gradient(165deg,rgba(250,248,244,.94) 0,rgba(240,235,226,.82) 42%,rgba(195,190,186,.55) 100%)}
+[data-sk-akzent="atelier"] .ton-mocha{--ton:linear-gradient(165deg,rgba(24,26,25,.9) 0,rgba(47,49,48,.74) 48%,rgba(106,61,42,.55) 100%)}
+[data-sk-akzent="atelier"] .ton-amber{--ton:linear-gradient(165deg,rgba(106,61,42,.9) 0,rgba(169,92,62,.72) 50%,rgba(217,150,122,.45) 100%)}
+[data-sk-akzent="atelier"] .ton-hoffnung{--ton:linear-gradient(180deg,rgba(24,26,25,.05) 20%,rgba(47,49,48,.55) 60%,rgba(106,61,42,.9) 100%)}
+[data-sk-akzent="atelier"] .ton-mocha .sk-badge{background:rgba(213,199,173,.2);color:var(--sk-champagne-100);border-color:rgba(213,199,173,.35)}
+[data-sk-akzent="atelier"] .sk-neu-dunkel{box-shadow:16px 18px 38px -12px rgba(24,26,25,.55),-10px -10px 26px -8px rgba(255,255,255,.9),inset 1px 1px 0 rgba(255,255,255,.1)!important}
+[data-sk-akzent="atelier"] .sk-card-dark .sk-media{box-shadow:12px 14px 30px -10px rgba(10,10,10,.6),-8px -8px 24px -8px rgba(133,131,126,.5)!important}
+[data-sk-akzent="atelier"] body > section h2:not(.sk-cta h2)::after{background:linear-gradient(90deg,var(--sk-amber-400),var(--sk-brass))}
+[data-sk-akzent="atelier"] .sk-footer{background:linear-gradient(to bottom,var(--sk-page),var(--sk-eggshell))}
+[data-sk-akzent="atelier"] section .sk-glass:not(.praxis-text):not(.portrait .sk-glass){background:rgba(251,250,248,.92)}
+/* ===== Dezenter Pfeil nach oben ===== */
+.nach-oben{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom));z-index:1020;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(251,249,246,.88);color:var(--sk-amber-600);border:1px solid rgba(255,255,255,.8);box-shadow:0 8px 22px -10px rgba(47,35,28,.45);text-decoration:none;font-size:1.1rem;
+  opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .4s var(--sk-ease),transform .4s var(--sk-ease),background .3s,color .3s}
+.nach-oben.zeigen{opacity:.82;transform:none;pointer-events:auto}
+.nach-oben:hover,.nach-oben:focus-visible{opacity:1;color:#fff;background:linear-gradient(150deg,var(--sk-amber-400),var(--sk-amber-600))}
+@media(min-width:992px){.nach-oben{right:28px;bottom:28px}}
+/* ===== Schalter Farbschema in der Navigation ===== */
+.nav-rechts{display:flex;align-items:center;gap:.6rem}
+.schema-switch{display:inline-flex;padding:3px;gap:2px;border-radius:999px;background:rgba(0,0,0,.06);border:1px solid var(--sk-line)}
+.schema-switch button{display:inline-flex;align-items:center;gap:.35rem;border:0;background:none;border-radius:999px;padding:.28rem .65rem;font-size:.75rem;font-weight:600;color:inherit;opacity:.7;transition:background .3s,opacity .3s,box-shadow .3s}
+.schema-switch button:hover{opacity:1}
+.schema-switch button[aria-checked="true"]{background:#fff;color:var(--sk-choc-800);opacity:1;box-shadow:0 2px 8px -3px rgba(0,0,0,.3)}
+.schema-switch .punkt{width:10px;height:10px;border-radius:50%;flex:none}
+.schema-switch [data-schema="mocha"] .punkt{background:linear-gradient(135deg,#4b3326 50%,#c8732a 50%)}
+.schema-switch [data-schema="atelier"] .punkt{background:linear-gradient(135deg,#2f3130 50%,#c0704f 50%)}
+.sk-navbar:not(.is-scrolled) .schema-switch{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22)}
+@media(max-width:991.98px){.nav-rechts{justify-content:space-between;padding:.5rem 0 .25rem}}
 @media (prefers-reduced-motion:reduce){.hero-in > *{opacity:1;transform:none}.atem-kugel{transform:scale(.95)!important}}
 </style>
 </head>
@@ -702,7 +780,13 @@ body > section .text-center h2::after{margin-inline:auto}
         <li class="nav-item"><a class="nav-link" href="#ueber">Über mich</a></li>
         <li class="nav-item"><a class="nav-link" href="#fragen">Fragen</a></li>
       </ul>
-      <a href="#kontakt" class="btn btn-amber btn-sm">Kontakt &amp; Termin</a>
+      <div class="nav-rechts">
+        <div class="schema-switch" role="radiogroup" aria-label="Farbschema">
+          <button type="button" role="radio" data-schema="mocha" aria-checked="true" title="Farbschema Mocha"><i class="punkt"></i>Mocha</button>
+          <button type="button" role="radio" data-schema="atelier" aria-checked="false" title="Farbschema Atelier"><i class="punkt"></i>Atelier</button>
+        </div>
+        <a href="#kontakt" class="btn btn-amber btn-sm">Kontakt &amp; Termin</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -981,6 +1065,7 @@ body > section .text-center h2::after{margin-inline:auto}
   <span>© 2026 Sibel Keller · Hypnose &amp; Life Coaching · Burgstrasse 64c, 8408 Winterthur</span>
   <nav class="d-flex gap-3" aria-label="Weitere Links"><a href="https://www.instagram.com/hypnose_life_coaching" target="_blank" rel="noopener"><i class="bi bi-instagram"></i> Instagram</a><a href="https://www.facebook.com/hypnose_life_coaching" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Facebook</a><a href="#">Impressum</a><a href="#">Datenschutz</a></nav>
 </footer>
+<a href="#top" class="nach-oben" id="nachOben" aria-label="Nach oben"><i class="bi bi-arrow-up"></i></a>
 
 
 <script>
@@ -1238,9 +1323,26 @@ body > section .text-center h2::after{margin-inline:auto}
     schritte.forEach(s => s.classList.toggle('erreicht', s.getBoundingClientRect().top < mitte));
   }
 
+  // Farbschema umschalten (Mocha / Atelier), Wahl wird im Browser gemerkt
+  const html = document.documentElement, farbe = document.querySelector('meta[name="theme-color"]');
+  const schalter = [...document.querySelectorAll('.schema-switch [data-schema]')];
+  function schema(name, merken){
+    html.dataset.skAkzent = name;
+    schalter.forEach(b => b.setAttribute('aria-checked', String(b.dataset.schema === name)));
+    if (farbe) farbe.content = name === 'atelier' ? '#2f3130' : '#4b3326';
+    if (merken) { try { localStorage.setItem('sk-schema', name); } catch (e) {} }
+  }
+  let gemerkt = null; try { gemerkt = localStorage.getItem('sk-schema'); } catch (e) {}
+  schema(gemerkt === 'atelier' || gemerkt === 'mocha' ? gemerkt : (html.dataset.skAkzent || 'mocha'), false);
+  schalter.forEach(b => b.addEventListener('click', () => schema(b.dataset.schema, true)));
+
+  // Pfeil nach oben erst nach einer Bildschirmhöhe zeigen
+  const pfeil = document.getElementById('nachOben');
+  function oben(){ pfeil.classList.toggle('zeigen', scrollY > innerHeight * .9); }
+
   let tick = false;
-  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { ablauf(); tick = false; }); } }, { passive: true });
-  addEventListener('resize', ablauf); ablauf();
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { ablauf(); oben(); tick = false; }); } }, { passive: true });
+  addEventListener('resize', ablauf); ablauf(); oben();
 
   // Menü auf dem Handy nach Klick schliessen
   document.querySelectorAll('#menue a').forEach(a => a.addEventListener('click', () => {
