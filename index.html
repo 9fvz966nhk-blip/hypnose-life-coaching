@@ -762,23 +762,47 @@ body > section .text-center h2::after{margin-inline:auto}
 .schema-switch [data-schema="mocha"] .punkt{background:linear-gradient(135deg,#4b3326 50%,#c8732a 50%)}
 .schema-switch [data-schema="atelier"] .punkt{background:linear-gradient(135deg,#2f3130 50%,#c0704f 50%)}
 .sk-navbar:not(.is-scrolled) .schema-switch{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22)}
-@media(max-width:991.98px){.nav-rechts{justify-content:space-between;padding:.5rem 0 .25rem}}
+@media(max-width:1199.98px){.nav-rechts{justify-content:space-between;padding:.5rem 0 .25rem}}
+/* ===== Navigation mit Angebots-Menü, Referenzen ===== */
+.sk-navbar .dropdown-toggle{background:none;border:0}
+.sk-navbar .dropdown-menu{min-width:15rem}
+.sk-navbar .dropdown-item{display:flex;gap:.6rem;align-items:center;font-size:.92rem}
+.sk-navbar .dropdown-item i{color:var(--sk-amber-500)}
+.sk-navbar .dropdown-item:active{color:#fff}
+.sk-navbar .dropdown-item:active i{color:inherit}
+@media(min-width:1200px) and (max-width:1399.98px){.sk-navbar .navbar-nav .nav-link{padding-inline:.55rem;font-size:.92rem}.navbar-brand small{display:none}}
+.nav-rechts .btn{white-space:nowrap}
+.sk-navbar .nav-link{white-space:nowrap}
+@media(max-width:1199.98px){.sk-navbar .navbar-collapse{padding:.5rem 0}}
+.sk-navbar .dropdown-toggle.show,.sk-navbar .dropdown-toggle:focus{color:inherit}
+@media(max-width:1199.98px){.sk-navbar .dropdown-menu{box-shadow:none;border:0;background:transparent;padding:0 0 0 .75rem}.sk-navbar:not(.is-scrolled) .dropdown-item{color:#fff}}
+.referenz{border-radius:8px;padding:1.6rem 1.5rem;height:100%;display:flex;flex-direction:column;gap:.9rem}
+.referenz blockquote{margin:0;font-family:var(--sk-font-display);font-size:1.1rem;line-height:1.45;color:var(--sk-choc-800);flex:1}
+.referenz figcaption{font-size:.85rem;font-weight:600;color:var(--sk-amber-600)}
 @media (prefers-reduced-motion:reduce){.hero-in > *{opacity:1;transform:none}.atem-kugel{transform:scale(.95)!important}}
 </style>
 </head>
 <body data-sk-anker-tempo="0.5">
 
-<nav class="navbar navbar-expand-lg sk-navbar" data-sk-scroll="500" aria-label="Hauptnavigation">
+<nav class="navbar navbar-expand-xl sk-navbar" data-sk-scroll="500" aria-label="Hauptnavigation">
   <div class="container-fluid px-0">
     <a class="navbar-brand" href="#top">Sibel Keller<small>Hypnose &amp; Life Coaching</small></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menue" aria-controls="menue" aria-expanded="false" aria-label="Menü öffnen"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="menue">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link" href="#themen">Themen</a></li>
-        <li class="nav-item"><a class="nav-link" href="#angebot">Angebot</a></li>
-        <li class="nav-item"><a class="nav-link" href="#preise">Preise</a></li>
         <li class="nav-item"><a class="nav-link" href="#ueber">Über mich</a></li>
-        <li class="nav-item"><a class="nav-link" href="#fragen">Fragen</a></li>
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Angebot</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#angebot" data-tab="a-hypnose"><i class="bi bi-moon-stars"></i> Hypnose</a></li>
+            <li><a class="dropdown-item" href="#angebot" data-tab="a-kinder"><i class="bi bi-balloon-heart"></i> Kinder &amp; Jugendliche</a></li>
+            <li><a class="dropdown-item" href="#angebot" data-tab="a-gespraech"><i class="bi bi-chat-heart"></i> Gesprächstherapie</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#themen">Themen</a></li>
+        <li class="nav-item"><a class="nav-link" href="#preise">Preise</a></li>
+        <li class="nav-item"><a class="nav-link" href="#fragen">Fragen &amp; Antworten</a></li>
+        <li class="nav-item"><a class="nav-link" href="#referenzen">Referenzen</a></li>
       </ul>
       <div class="nav-rechts">
         <div class="schema-switch" role="radiogroup" aria-label="Farbschema">
@@ -1025,6 +1049,21 @@ body > section .text-center h2::after{margin-inline:auto}
         <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Nein. Du kannst die Trance jederzeit verlassen, wenn es sich nicht mehr stimmig anfühlt.</div></div></div>
       <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5" aria-expanded="false">Zahlt die Krankenkasse?</button></h3>
         <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Von der Grundversicherung in der Regel nicht. Die Kosten trägst du privat.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REFERENZEN ============ -->
+<section class="sk-section" id="referenzen" aria-labelledby="referenzenTitel">
+  <div class="sk-container">
+    <div class="text-center sk-narrow mb-4">
+      <h2 id="referenzenTitel" class="sk-reveal">Referenzen</h2>
+      <p class="lead sk-reveal" style="--sk-delay:.08s">Was Menschen nach unserer gemeinsamen Arbeit erzählen.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><figure class="referenz sk-neu sk-neu-hover m-0"><span class="sk-stars" aria-hidden="true">★★★★★</span><blockquote>PLATZHALTER: Hier kommt ein Erfahrungsbericht von Sibels Referenzen-Seite hin.</blockquote><figcaption>Name oder Initialen · Thema</figcaption></figure></div>
+      <div class="col-md-4"><figure class="referenz sk-neu sk-neu-hover m-0"><span class="sk-stars" aria-hidden="true">★★★★★</span><blockquote>PLATZHALTER: Hier kommt ein Erfahrungsbericht von Sibels Referenzen-Seite hin.</blockquote><figcaption>Name oder Initialen · Thema</figcaption></figure></div>
+      <div class="col-md-4"><figure class="referenz sk-neu sk-neu-hover m-0"><span class="sk-stars" aria-hidden="true">★★★★★</span><blockquote>PLATZHALTER: Hier kommt ein Erfahrungsbericht von Sibels Referenzen-Seite hin.</blockquote><figcaption>Name oder Initialen · Thema</figcaption></figure></div>
     </div>
   </div>
 </section>
@@ -1335,6 +1374,12 @@ body > section .text-center h2::after{margin-inline:auto}
   let gemerkt = null; try { gemerkt = localStorage.getItem('sk-schema'); } catch (e) {}
   schema(gemerkt === 'atelier' || gemerkt === 'mocha' ? gemerkt : (html.dataset.skAkzent || 'mocha'), false);
   schalter.forEach(b => b.addEventListener('click', () => schema(b.dataset.schema, true)));
+
+  // Angebots-Menü: passenden Reiter öffnen und zum Abschnitt gleiten
+  document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => {
+    const knopf = document.querySelector('[data-bs-target="#' + a.dataset.tab + '"]');
+    if (knopf) bootstrap.Tab.getOrCreateInstance(knopf).show();
+  }));
 
   // Pfeil nach oben erst nach einer Bildschirmhöhe zeigen
   const pfeil = document.getElementById('nachOben');
