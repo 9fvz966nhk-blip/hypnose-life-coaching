@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de-CH" class="sk-snap-sanft" data-sk-akzent="mocha">
+<html lang="de-CH" data-sk-akzent="mocha">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -570,11 +570,6 @@ body{overflow-x:hidden}
 .krise{border-radius:var(--sk-r-md);padding:1rem 1.2rem;background:var(--sk-surface);border:1px solid var(--sk-line);display:flex;gap:.9rem;align-items:flex-start;font-size:.92rem}
 .krise i{color:var(--sk-danger);font-size:1.15rem;line-height:1.4}
 
-/* Mobile Leiste */
-.sticky-cta{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:1020;transform:translateY(150%);transition:transform .6s var(--sk-ease)}
-.sticky-cta.zeigen{transform:none}
-.sticky-cta .btn{width:100%}
-@media(min-width:992px){.sticky-cta{display:none}}
 
 /* Leistung: Glas-Unschärfe nur bei Navigation, Hero und über Bildern */
 section .sk-glass:not(.praxis-text):not(.portrait .sk-glass){backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(255,252,246,.92)}
@@ -678,7 +673,7 @@ body > section .text-center h2::after{margin-inline:auto}
   .sk-table-wrap td[data-label]{display:flex;flex-direction:column;font-size:1.05rem}
   .sk-table-wrap td[data-label]::before{content:attr(data-label);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--sk-muted)}
 }
-@media(max-width:399.98px){.navbar-brand small{display:none}.sticky-cta .btn{font-size:.95rem;padding-inline:1rem}}
+@media(max-width:399.98px){.navbar-brand small{display:none}}
 @media(max-width:575.98px){
   .sk-segment{display:flex;width:100%;overflow:visible}
   .sk-segment .nav-item{flex:1 1 0;min-width:0}
@@ -987,7 +982,6 @@ body > section .text-center h2::after{margin-inline:auto}
   <nav class="d-flex gap-3" aria-label="Weitere Links"><a href="https://www.instagram.com/hypnose_life_coaching" target="_blank" rel="noopener"><i class="bi bi-instagram"></i> Instagram</a><a href="https://www.facebook.com/hypnose_life_coaching" target="_blank" rel="noopener"><i class="bi bi-facebook"></i> Facebook</a><a href="#">Impressum</a><a href="#">Datenschutz</a></nav>
 </footer>
 
-<div class="sticky-cta" id="stickyCta"><a href="#kontakt" class="btn btn-amber btn-lg">Kennenlerngespräch vereinbaren</a></div>
 
 <script>
 /*!
@@ -1244,13 +1238,9 @@ body > section .text-center h2::after{margin-inline:auto}
     schritte.forEach(s => s.classList.toggle('erreicht', s.getBoundingClientRect().top < mitte));
   }
 
-  // Mobile Leiste
-  const sticky = document.getElementById('stickyCta'), kontakt = document.getElementById('kontakt');
-  function leiste(){ sticky.classList.toggle('zeigen', scrollY > innerHeight * .8 && kontakt.getBoundingClientRect().top > innerHeight); }
-
   let tick = false;
-  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { ablauf(); leiste(); tick = false; }); } }, { passive: true });
-  addEventListener('resize', ablauf); ablauf(); leiste();
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { ablauf(); tick = false; }); } }, { passive: true });
+  addEventListener('resize', ablauf); ablauf();
 
   // Menü auf dem Handy nach Klick schliessen
   document.querySelectorAll('#menue a').forEach(a => a.addEventListener('click', () => {
